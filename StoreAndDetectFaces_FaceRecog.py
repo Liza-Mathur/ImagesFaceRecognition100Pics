@@ -19,3 +19,5 @@ def storeFaces(img):
     #     cv2.imwrite(os.path.join(folder, f"{i}.jpg"), face)
     #     i += 1
         
+# img = cv2.imread('DATA/Images/20221113_222918.jpg')
+# storeFaces(img)
