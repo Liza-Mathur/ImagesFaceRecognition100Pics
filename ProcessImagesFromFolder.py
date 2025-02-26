@@ -17,6 +17,8 @@ for i, images in enumerate(file):
     # Now I will get embeddings for each face in the image
     embeddings = sadf.storeFaces(image_rgb)
     # print(embeddings) 
+    if not embeddings:
+        continue
     print(type((embeddings[0])))
     print('got embeddings')
     indexList, embeddings_data_list = getIndex.save_embeddings(embeddings, embeddings_data_list)
