@@ -24,8 +24,8 @@ for i, images in enumerate(file):
     saveImage.save_images_indexes(indexList, images)
     print('saved images with indexes')
     df.delete_stored_folder_contents('DATA/StoredFaces')
-    if i==20:
-        # print(embeddings_data_list)
-        break
+    # if i==20:
+    #     # print(embeddings_data_list)
+    #     break
     
 # Need to implement logic - if no embeddings found - from line 18 - then skip rest loop and continue
