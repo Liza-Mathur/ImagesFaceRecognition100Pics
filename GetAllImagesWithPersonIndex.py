@@ -40,6 +40,10 @@ def getImagesWithPersonIndex(personIdx , imageName):
     imagesWithPersonIdx = []
     personIdx = int(personIdx)
     # print('Person idx type - ', type(personIdx))
+    person_img_idx = 0
+    for i, img in enumerate(images):
+        if img == imageName:
+            person_img_idx = indexes[i][personIdx]
     for i, image in enumerate(images):
         if image == imageName:
             print("img == image_name, so continue")
@@ -48,7 +52,7 @@ def getImagesWithPersonIndex(personIdx , imageName):
         # print(type(indexes[i]))
         for k in indexes[i]:
             # print(f"in {k} - k getting index - {indexes[i]}")
-            if k == personIdx:
+            if k == person_img_idx:
                 print(f"Adding image - {image} becuase it has indexes - {k}")
                 imagesWithPersonIdx.append(image)
     return imagesWithPersonIdx
